@@ -1,10 +1,7 @@
 package digitalwatermarks;
 
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferInt;
-import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
-import java.util.ArrayList;
 
 public class Picture {
     private int height;

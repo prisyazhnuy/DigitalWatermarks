@@ -1,5 +1,7 @@
 package digitalwatermarks;
 
+import java.util.ArrayList;
+
 public class Functions {
     private static byte[] stringToASCII(String mess){
         byte[] result = new byte[mess.length()];
@@ -34,7 +36,27 @@ public class Functions {
         return asciiToBinary(i.byteValue());
     }
     
+    public static ArrayList<String> intToBinary(int[] input){
+        ArrayList<String> result = new ArrayList<>();
+        for(Integer i : input){
+            result.add(intToBinary(i));
+        }
+        return result;
+    }
+    
     public static String stringToBinary(String mess){
         return asciiToBinary(stringToASCII(mess));
+    }
+    
+    public static int binaryToInt(String bin){
+        int sum=0;
+        char[] binList = bin.toCharArray();
+        for(int i=0; i<binList.length; i++){
+            if(binList[binList.length-i-1]=='1'){
+                sum+=Math.pow(2, i);
+            }
+            
+        }
+        return sum;
     }
 }

@@ -36,6 +36,16 @@ public class FunctionsTest {
      @Test
      public void intToASCII() {
          System.out.println(Functions.intToBinary(16));
+         String po = "dfgf";
+         char[] ch = po.toCharArray();
+         System.out.println(ch);
          assertTrue(Functions.intToBinary(16).equals("00010000"));
+     }
+     
+     @Test
+     public void binaryToInt(){
+         System.out.println(Functions.binaryToInt("11111111"));
+         System.out.println(Functions.stringToBinary("п0ч@т0к"));
+         System.out.println(Functions.stringToBinary("кiнeu,b"));
      }
 }
